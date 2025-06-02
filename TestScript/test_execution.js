@@ -1,0 +1,1 @@
+const { generateTestScripts } = await import('./TestScriptGenerator.js');

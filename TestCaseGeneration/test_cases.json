@@ -1,0 +1,92 @@
+ Here is a set of test cases for the Login functionality in JSON format:
+
+```json
+[
+  {
+    "Test Case ID": "TC01",
+    "Test Case Description": "Valid User login with correct credentials",
+    "Inputs": {
+      "Username": "valid_user",
+      "Password": "password"
+    },
+    "Expected Result": "Successfully logged in and redirected to the dashboard",
+    "Test Steps": [
+      "Enter valid user credentials",
+      "Click on the login button",
+      "Verify that the user is successfully logged in and redirected to the dashboard"
+    ]
+  },
+  {
+    "Test Case ID": "TC02",
+    "Test Case Description": "Invalid User login with incorrect username",
+    "Inputs": {
+      "Username": "invalid_user",
+      "Password": "password"
+    },
+    "Expected Result": "Display an error message: 'Invalid username or password.'",
+    "Test Steps": [
+      "Enter invalid user credentials (invalid_user and password)",
+      "Click on the login button",
+      "Verify that an error message is displayed: 'Invalid username or password.'"
+    ]
+  },
+  {
+    "Test Case ID": "TC03",
+    "Test Case Description": "Invalid User login with incorrect password",
+    "Inputs": {
+      "Username": "valid_user",
+      "Password": "incorrect_password"
+    },
+    "Expected Result": "Display an error message: 'Invalid username or password.'",
+    "Test Steps": [
+      "Enter invalid user credentials (valid_user and incorrect_password)",
+      "Click on the login button",
+      "Verify that an error message is displayed: 'Invalid username or password.'"
+    ]
+  },
+  {
+    "Test Case ID": "TC04",
+    "Test Case Description": "Empty Username field",
+    "Inputs": {
+      "Username": "",
+      "Password": "password"
+    },
+    "Expected Result": "Display an error message: 'Username cannot be empty.'" ,
+    "Test Steps": [
+      "Enter empty username and password",
+      "Click on the login button",
+      "Verify that an error message is displayed: 'Username cannot be empty.'"
+    ]
+  },
+  {
+    "Test Case ID": "TC05",
+    "Test Case Description": "Empty Password field",
+    "Inputs": {
+      "Username": "valid_user",
+      "Password": ""
+    },
+    "Expected Result": "Display an error message: 'Password cannot be empty.'" ,
+    "Test Steps": [
+      "Enter valid username and empty password",
+      "Click on the login button",
+      "Verify that an error message is displayed: 'Password cannot be empty.'"
+    ]
+  },
+  {
+    "Test Case ID": "TC06",
+    "Test Case Description": "User with no account (non-registered user) trying to log in",
+    "Inputs": {
+      "Username": "nonexistent_user",
+      "Password": "password"
+    },
+    "Expected Result": "Display an error message: 'No such user exists.'" ,
+    "Test Steps": [
+      "Enter non-existent username and password",
+      "Click on the login button",
+      "Verify that an error message is displayed: 'No such user exists.'"
+    ]
+  }
+]
+```
+
+The test cases above cover positive (valid login), negative (invalid login, empty fields), and edge case scenarios (non-registered user). They also include the inputs, expected results, and test steps for each scenario.
