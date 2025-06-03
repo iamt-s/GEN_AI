@@ -11,6 +11,7 @@ async function generateTestScripts() {
    const functionality = prompt('Enter the API functionality (e.g., Create, Update, Delete): ');    
    framework = prompt('Choose your test framework (Jest / Mocha): ');
    const fileName = prompt('Provide a filename to save the test script (without extension): ') + '.js';
+   const apiKey=process.env.APIKEY 
 // //- Use the test framework: ${framework}
     const testPrompt = `
 Generate a simple JavaScript test script for the following:
@@ -24,7 +25,7 @@ Generate a simple JavaScript test script for the following:
                             import { expect } from 'chai';
                             import axios from 'axios';
                             import { describe, it } from 'mocha'
-  - Use api key as "reqres-free-v1" in the headers
+  - Use api key as "${apiKey}" in the headers
   - Cover both positive and negative test cases
   - Include error handling for network errors and invalid responses
   - Be free of syntax, runtime, and configuration errors
